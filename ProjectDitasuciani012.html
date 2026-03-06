@@ -56,9 +56,13 @@
     <button onclick="tambah('-')">−</button><br>
 
     <button onclick="tambah('0')">0</button>
-    <button onclick="hapus()">C</button>
+    <button onclick="tambah('.')">.</button>
     <button onclick="hitung()">=</button>
-    <button onclick="tambah('+')">+</button>
+    <button onclick="tambah('+')">+</button><br>
+
+    <button onclick="hapus()">C</button>
+    <button onclick="hapusSatu()">DEL</button>
+
 </div>
 
 <script>
@@ -68,6 +72,11 @@
 
     function hapus(){
         document.getElementById("layar").value = "";
+    }
+
+    function hapusSatu(){
+        let layar = document.getElementById("layar").value;
+        document.getElementById("layar").value = layar.slice(0,-1);
     }
 
     function hitung(){
