@@ -60,9 +60,9 @@
     <button onclick="hitung()">=</button>
     <button onclick="tambah('+')">+</button><br>
 
+    <!-- Perubahan: menambahkan tombol DEL -->
     <button onclick="hapus()">C</button>
-    <button onclick="hapusSatu()">"DEL"</button> 
-//tambah del
+    <button onclick="hapusSatu()">DEL</button>
 
 </div>
 
@@ -75,6 +75,7 @@
         document.getElementById("layar").value = "";
     }
 
+    // fungsi baru untuk tombol DEL
     function hapusSatu(){
         let layar = document.getElementById("layar").value;
         document.getElementById("layar").value = layar.slice(0,-1);
